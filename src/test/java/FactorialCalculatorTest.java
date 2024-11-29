@@ -5,7 +5,7 @@ import org.junit.jupiter.api.Test;
 
 public class FactorialCalculatorTest {
 
-    @Test
+    @org.junit.jupiter.api.Test
     public void testFactorialOfZero() {
         assertEquals(1, FactorialCalculator.factorial(0), "Факториал 0 должен равняться 1");
     }
