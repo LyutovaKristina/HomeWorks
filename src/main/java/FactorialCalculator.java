@@ -14,18 +14,18 @@ public class FactorialCalculator {
     }
 
     public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Введите неотрицательное целое число для вычисления факториала: ");
+        int number = scanner.nextInt();
 
-    }
+        try {
+            long result = factorial(number);
+            System.out.println("Факториал числа " + number + " равен " + result);
+        } catch (IllegalArgumentException e) {
+            System.out.println(e.getMessage());
+        }
 
-    public int subtract(int i, int i1) {
-    }
-
-    public int add(int i, int i1) {
-    }
-
-    public int multiply(int i, int i1) {
-    }
-
-    public void divide(int i, int i1) {
+        scanner.close();
     }
 }
+
