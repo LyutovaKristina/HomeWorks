@@ -18,10 +18,10 @@ public class CheckBlockName {
     private By moreInfoLink = By.linkText("Подробнее о сервисе");
     private By serviceTypeSelect = By.id("serviceType");
     private By phoneNumberInput = By.id("connection-phone");
-    private By continueButton = By.class("button button_default");
+    private By continueButton = By.className("button button_default");
 
 
-    public String getCheckBlockName() {
+    public Object getCheckBlockName() {
         return driver.findElement(blockName).getText();
     }
 

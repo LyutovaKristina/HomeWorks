@@ -15,7 +15,7 @@ public class CheckBlockNameTest {
 
     @Before
     public void setUp() {
-        System.setProperty("webdriver.chrome.driver", "C:\\Users\\lyuto\\OneDrive\\Рабочий стол\\chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", "src/test/java/resource/chromedriver.exe");
         driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);

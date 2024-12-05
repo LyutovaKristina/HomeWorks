@@ -7,7 +7,7 @@ public class ConfProperties {
     protected static Properties PROPERTIES;
     static {
         try {
-            //указание пути до файла с настройками
+
             fileInputStream = new FileInputStream("src/test/java/resourse/conf.properties");
             PROPERTIES = new Properties();
             PROPERTIES.load(fileInputStream);
