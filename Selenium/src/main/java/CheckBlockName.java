@@ -17,8 +17,8 @@ public class CheckBlockName {
     private By paymentBelKart = By.cssSelector("img[src*= 'belkart']");
     private By moreInfoLink = By.linkText("Подробнее о сервисе");
     private By serviceTypeSelect = By.id("serviceType");
-    private By phoneNumberInput = By.id("connection-phone"); // Исправлено
-    private By continueButton = By.id("continueButton"); // Замените на актуальный ID кнопки
+    private By phoneNumberInput = By.id("connection-phone");
+    private By continueButton = By.class("button button_default"); // Замените на актуальный ID кнопки
 
 
     public String getCheckBlockName() {
