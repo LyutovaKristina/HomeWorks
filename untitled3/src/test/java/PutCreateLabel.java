@@ -5,11 +5,11 @@ import static org.hamcrest.Matchers.equalTo;
 public class PutCreateLabel {
 
     public static void main(String[] args) {
-        String token = getToken(); // Получаем токен
-        infoOfLabel(token); // Вызываем метод с токеном
+        String token = getToken();
+        infoOfLabel(token);
     }
 
-    // Метод для получения токена
+
     public static String getToken() {
         String requestBody = "{\"username\": \"Kris\", \"password\": \"172839qQ!\"}";
 
@@ -24,10 +24,10 @@ public class PutCreateLabel {
                 .statusCode(201)
                 .extract()
                 .jsonPath()
-                .getString("token"); // Извлекаем токен
+                .getString("token");
     }
 
-    // Метод для создания/обновления метки
+
     public static ValidatableResponse infoOfLabel(String token) {
         String information =
                 "{ \"email\": \"Kristina1@mail.ru\", " +
@@ -39,13 +39,13 @@ public class PutCreateLabel {
         return given()
                 .baseUri("https://try.vikunja.io")
                 .header("Content-Type", "application/json")
-                .header("Authorization", "Bearer " + token) // Добавляем токен
+                .header("Authorization", "Bearer " + token)
                 .body(information)
                 .when()
                 .put("/api/v1/labels")
                 .then()
                 .log().all()
-                .statusCode(200) // Проверяем статус-код
+                .statusCode(200)
                 .body("email", equalTo("Kristina1@mail.ru"))
                 .body("name", equalTo("Kristina"))
                 .body("username", equalTo("misha"))
