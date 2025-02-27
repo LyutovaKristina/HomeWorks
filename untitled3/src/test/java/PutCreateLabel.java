@@ -54,7 +54,7 @@ public class PutCreateLabel {
         return given()
                 .baseUri(baseUrl)
                 .header("Content-Type", "application/json")
-                .header("Authorization", "Bearer " + token) // Используем полученный токен
+                .header("Authorization", "Bearer " + token)
                 .body(information)
                 .when()
                 .put("/api/v1/labels")
